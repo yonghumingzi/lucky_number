@@ -1,0 +1,67 @@
+<span style="font-size:14px;"><!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>幸运数字</title>  
+    <style>  
+        *{  
+            padding: 0;  
+            margin: 0;  
+        }
+        .word{
+        	font-size: 35px;
+			color: #CC0066;
+        }
+        #uls{  
+            width: 500px;  
+            height: 500px;  
+            margin: 50px auto;  
+        }
+        li{  
+            width: 150px;  
+            height: 150px;  
+            background: #CC0033;  
+            float: left;  
+            list-style: none;  
+            margin:4px;  
+            color: #fff;  
+            text-align: center;  
+            line-height: 150px;  
+            font-size: 80px;  
+            font-weight: bold;  
+        }
+        li:hover{
+        	background: #FF9900;
+        }
+        #uls li button{  
+            width: 50px;  
+            height: 30px;  
+        }  
+        .out{  
+            font-size: 20px;  
+        }
+
+    </style>  
+</head>  
+<body>  
+<center>
+	<script type="text/javascript">
+    function red(num){
+    	document.write("<form action='/result' method=post name=form1 style='display:none'>");
+    	document.write("<input type=hidden name='number' value='"+num+"'/>");
+    	document.write("</form>");
+    	document.form1.submit();
+    }
+    </script>
+	<p class="word">你好, {{name}}, 欢迎来到我的页面</p>
+	<p class="word">现在，请你从9个框里选出一个，来获得你的幸运数字吧</p>
+	<a class="out" href="/clear">点这里退出</a>
+    <ul id='uls'>
+    {% set lis = [0,1,2,3,4,5,6,7,8] %}
+    {% for i in lis %}
+    	<li onclick="this.innerHTML={{number}};setTimeout('red({{number}})',1000);">?</li>
+    {% endfor %}
+    </ul>
+</center> 
+</body>  
+</html></span>

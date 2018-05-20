@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta http-equiv = "Content-Type" content= "text/html; charset=utf-8">
+		<style>
+			#p1
+			{
+				font-size: 30px;
+				color: #CC0066;
+			}
+			#p2
+			{
+				font-size: 50px;
+				color: #CC0066;
+			}
+			#inputBox{
+				font-size: 25px;
+				text-align: center;
+				color: #660066;
+				height: 50;
+				width: 300;
+				box-shadow: 10px 10px 5px #888888;
+			}
+			#sub{
+				height:40;
+				width: 100;
+				background: #FF6699;
+    			color: #FF0000;
+    			text-decoration: none;
+    			font-size: 20px;
+			}
+		</style>
+		<title>输入昵称</title>
+	</head>
+	<body>
+	<center>
+			<p id="p1">来抽一个幸运数字吧~<p>
+			<p id="p2">请输入你的昵称</p>
+			<form method="post" action="/draw">
+
+			<p id="p3">
+			<input type="text" name="name" id="inputBox" required></p>
+			<br>
+			<p id="p4"><input type="submit" name="submit" id="sub" value="Submit"></p>
+			</form>
+	</center>
+	</body>
+</html>
+
